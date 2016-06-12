@@ -1,11 +1,9 @@
 #include<stdio.h>
 #include<string.h>
 int main(){
-    int input[10001];
-    int output[10001];
+    int input[10001]={0};
+    int output[10001]={0};
     int i,j;
-    memset(input,0,sizeof(input));
-    memset(output,0,sizeof(output));
     for(i=0;i<1000;i++){
         scanf("%d",&input[i]);
         if(input[i] == 0){
@@ -23,13 +21,13 @@ int main(){
 
         }
     }
-    for(i=0;i<j;i++){
-        if (j==0){
-            printf("0 0");
+    if (j==0||i<2){
+        printf("0 0");
+    }else{
+        for(i=0;i<j;i++){
+            printf("%d ",output[i]);
         }
-        printf("%d ",output[i]);
+        printf("%d\n",output[j]);
     }
-    printf("%d\n",output[j]);
     return 0;
-
 }
