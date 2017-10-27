@@ -1,2 +1,2 @@
 # PAT
-pat乙级答案
+codewars some solution
